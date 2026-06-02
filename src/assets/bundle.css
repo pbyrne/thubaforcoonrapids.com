@@ -1,0 +1,18 @@
+:root {
+  --base-font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  --base-font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+  --base-color-black: #171717;
+  --base-color-green-jewel: #0f6838;
+  --base-color-green-liome: #85c245;
+  --base-color-pink: #bd0071;
+  --base-color-red: #ff604a;
+  --base-color-white: #fbfafa;
+
+  --theme-font-display: var(--base-font-sans);
+  --theme-font-heading: var(--base-font-serif);
+}
+
+html {
+  font-family: var(--theme-font-display);
+}
