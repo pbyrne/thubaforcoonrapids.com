@@ -13,6 +13,10 @@
   --theme-font-heading: var(--base-font-serif);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 html {
   font-family: var(--theme-font-display);
 }
