@@ -8,6 +8,18 @@
     <script src="/assets/bundle.js"></script>
   </head>
   <body>
-    {{ content | safe }}
+    <header>
+      <hr class="border__top">
+      <p>Header content</p>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>Copyright © 2026 Thuba Nguyen for Coon Rapids Mayor Committee
+      <hr class="border__bottom">
+    </footer>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
   --base-color-black: #171717;
   --base-color-green-jewel: #0f6838;
-  --base-color-green-liome: #85c245;
+  --base-color-green-lime: #85c245;
   --base-color-pink: #bd0071;
   --base-color-red: #ff604a;
   --base-color-white: #fbfafa;
@@ -15,4 +15,22 @@
 
 html {
   font-family: var(--theme-font-display);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+hr.border__top {
+  border-top: 1rem solid var(--base-color-green-lime);
+  border-bottom: 1rem solid var(--base-color-green-jewel);
+  margin: 0;
+}
+
+hr.border__bottom {
+  border-top: 1rem solid var(--base-color-red);
+  border-bottom: 1rem solid var(--base-color-pink);
+  margin: 0;
 }
