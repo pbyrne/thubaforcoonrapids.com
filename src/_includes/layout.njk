@@ -6,17 +6,21 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/assets/bundle.css">
     <script src="/assets/bundle.js"></script>
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <meta name="pjb-debug" content="{{ page.url }}">
   </head>
   <body>
     <header>
       <hr class="border__top">
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/endorsements">Endorsements</a></li>
+          <li><a aria-current="{{ "page" if page.url == "/" }}" href="/">Home</a></li>
+          <li><a aria-current="{{ "page" if page.url == "/endorsements/" }}" href="/endorsements/">Endorsements</a></li>
+          <li><a aria-current="{{ "page" if page.url == "/priorities/" }}" href="/priorities/">Priorities</a></li>
+          <li><a aria-current="{{ "page" if page.url == "/about/" }}" href="/about"/>About</a></li>
+          <li><a aria-current="{{ "page" if page.url == "/volunteer/" }}" href="/volunteer/">Volunteer</a></li>
         </ul>
       </nav>
-      <p>Header content</p>
     </header>
 
     <main>
