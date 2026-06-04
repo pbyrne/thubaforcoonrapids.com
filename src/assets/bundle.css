@@ -132,3 +132,18 @@ footer {
 .pronunciation {
   font-style: italic;
 }
+
+blockquote {
+  background: var(--base-color-green-lime);
+  border-radius: 1rem;
+  border: 5px solid var(--base-color-green-jewel);
+  margin: 0;
+
+  p {
+    margin: 1rem;
+  }
+
+  p.credit {
+    text-align: right;
+  }
+}
