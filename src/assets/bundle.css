@@ -30,14 +30,18 @@ body {
   margin: 0;
   padding: 0;
 
+
   /* Make content fill screen if too short (for double-bar bottom border at bottom or lower)  */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  grid-template-columns:100%;
+  grid-template-areas: 'header' 'main' 'footer';
+  min-height: 100svh;
 }
 
 header {
+  grid-area: header;
+
   hr {
     border-top: 1rem solid var(--base-color-green-lime);
     border-bottom: 1rem solid var(--base-color-green-jewel);
@@ -73,9 +77,21 @@ nav {
 }
 
 main {
+  grid-area: main;
   padding: 1rem;
-  margin: 0 auto;
-  max-width: 50rem;
+
+  /* Then child grid to show main content in central column */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+
+  #wrapper {
+    grid-area: 1 / 2 / 1 / 3;
+  }
+
+  #wrapper.full {
+    grid-area: 1 / 1 / 1 / 4
+  }
 }
 
 
@@ -102,6 +118,7 @@ details {
 }
 
 footer {
+  grid-area: footer;
   margin-top: auto; /* tie into `display: flex` on body to push footer to bottom of page if content is too short */
   text-align: center;
 
@@ -110,4 +127,8 @@ footer {
     border-bottom: 1rem solid var(--base-color-pink);
     margin: 0;
   }
+}
+
+.pronunciation {
+  font-style: italic;
 }
