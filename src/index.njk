@@ -18,8 +18,15 @@ description: Thuba Nguyen is running for mayor of Coon Rapids with a bold vision
   <p class="credit">—Thuba Nguyen (<span class="pronunciation">Too-ba Win</span>)</p>
 </blockquote>
 
-<article>
-  <p>
-  Highlight of priorities with links to that page for more detail.
-  </p>
-</article>
+<section>
+  <h2>Priorities</h2>
+  {% for priority in priorities %}
+  <article>
+    <h3>{{ priority.title }}</h3>
+    <p>
+    {{ priority.description }}
+    <a href="/priorities#{{ priority.anchor }}">Learn more →</a>
+    </p>
+  </article>
+  {% endfor %}
+</section>

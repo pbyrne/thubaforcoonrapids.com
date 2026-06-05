@@ -1,12 +1,18 @@
 class Priority {
   title
   description
+  slug
   bullets = []
 
-  constructor({title, description, bullets = []}) {
+  constructor({title, description, slug, bullets = []}) {
     this.title = title
     this.description = description
+    this.slug = slug
     this.bullets = bullets
+  }
+
+  get anchor() {
+    return `priority__${this.slug}`;
   }
 }
 
@@ -14,6 +20,7 @@ export default function () {
   return [
     new Priority({
       title: "Education",
+      slug: "education",
       description: "Investment in schools.",
       bullets: [
         "Wrap around service for prenatal, early education, through pre-k until Kindergarten transition.",
@@ -25,6 +32,7 @@ export default function () {
 
     new Priority({
       title: "Safe Communities",
+      slug: "safety",
       description: "Dek for safe communities.",
       bullets: [
         "Support law enforcement and public safety initiatives.",
@@ -36,6 +44,7 @@ export default function () {
 
     new Priority({
       title: "Health and Human Services",
+      slug: "health",
       description: "Taking care of our vulnerable communities",
       bullets: [
         "Strengthen the integrity of programs and services our neighbors rely on.",
@@ -51,6 +60,7 @@ export default function () {
 
     new Priority({
       title: "Housing Affordability",
+      slug: "housing",
       description: "Fiscally responsible policy that puts residents central to decision-making.",
       bullets: [
         "Lower property taxes.",
@@ -62,6 +72,7 @@ export default function () {
 
     new Priority({
       title: "Economic Opportunities",
+      slug: "opportunities",
       description: "Dek for economic opportunities",
       bullets: [
         "Economic development.",
@@ -79,6 +90,7 @@ export default function () {
 
     new Priority({
       title: "Art and Cultural Legacy",
+      slug: "arts",
       description: "Dek for art",
       bullets: [
         "Invest in cultural celebrations that bring our diverse communities together.",

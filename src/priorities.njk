@@ -8,7 +8,7 @@ description: Learn Thuba's top priorities as mayor of Coon Rapids.
   <h2>Key priorities</h2>
 
   {% for priority in priorities %}
-  <article>
+  <article id="{{ priority.anchor }}">
     <h3>{{ priority.title }}</h3>
     <p>{{ priority.description }}</p> <ul>
       {% for bullet in priority.bullets %}
