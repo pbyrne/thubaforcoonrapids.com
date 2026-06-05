@@ -68,8 +68,6 @@ nav {
   }
 
   a:hover, a:focus-visible, a[aria-current=page] {
-    /* background-color: var(--base-color-green-lime); */
-    /* color: var(--base-color-white); */
     color: var(--base-color-green-lime);
     border-bottom: 1px solid var(--base-color-green-lime);
   }
@@ -159,11 +157,11 @@ blockquote.hero {
 
 .priority_teaser {
   /* Hack around borders not having native gradient; define background with the gradient where the border would go (with transparent border below) */
-  background: linear-gradient(var(--base-color-red) 0 0) padding-box, linear-gradient(to right, var(--base-color-pink), var(--base-color-red)) border-box;
+  background: linear-gradient(var(--base-color-red) 0 0) padding-box, linear-gradient(to bottom, var(--base-color-pink), var(--base-color-red)) border-box;
   border-radius: 1rem;
   border: 0.5rem solid transparent;
   color: var(--base-color-black);
-  padding: 0 1rem;
+  padding: 0.5rem 1rem 0;
 
   .priority_teaser__heading {
     margin-top: 0;
