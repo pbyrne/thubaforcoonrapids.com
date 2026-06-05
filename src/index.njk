@@ -4,28 +4,35 @@ title: Home
 description: Thuba Nguyen is running for mayor of Coon Rapids with a bold vision for our future.
 ---
 
-<blockquote>
+<blockquote class="hero">
   <p>
-  Coon Rapids is ready for a breath of fresh air in the mayor’s office.
-  We need leadership that is authentic, promotes unity, and is willing to stand up for all our neighbors.
+  My name is Thuba Nguyen and I am a dedicated early childhood education specialist, published children’s book author, and community leader.
   </p>
 
   <p>
-  Together, we can build a stronger and more vibrant community grounded in our shared humanity and treating each other with dignity.
-  Let’s get back to what matters: how our roads function, investing in our schools, and taking care of our parks and city amenities so every resident can enjoy them and thrive in our city, together.
+  I am running for Mayor to ensure that every family, student, neighbor, and small business has the support and resources they need to thrive.
+  Coon Rapids is a wonderful community and deserves common-sense leadership grounded in compassion and integrity.
   </p>
 
-  <p class="credit">—Thuba Nguyen (<span class="pronunciation">Too-ba Win</span>)</p>
+  <p>
+  I believe in a representative democracy that works for everyone.
+  My life’s work has been about listening, leading, and creating spaces where people from all walks of life can succeed.
+  I am eager to bring that same dedication, collaborative spirit, and fresh perspective to City Hall.
+  </p>
+
+  <p>
+  As your next Mayor I am committed to building a vibrant, inclusive, and forward-thinking future for all residents of Coon Rapids.
+  </p>
 </blockquote>
 
-<section>
-  <h2>Priorities</h2>
+<section class="priority_teasers">
+  <h2 class="span-all">Priorities</h2>
   {% for priority in priorities %}
-  <article>
-    <h3>{{ priority.title }}</h3>
+  <article class="priority_teaser priority_teaser-{{ priority.slug }}">
+    <h3 class="priority_teaser__heading">{{ priority.title }}</h3>
     <p>
     {{ priority.description }}
-    <a href="/priorities#{{ priority.anchor }}">Learn more →</a>
+    <a href="/priorities#{{ priority.anchor }}" title="Learn more">→</a>
     </p>
   </article>
   {% endfor %}
