@@ -7,86 +7,24 @@ description: Learn Thuba's top priorities as mayor of Coon Rapids.
 <section>
   <h2>Key priorities</h2>
 
-  <details>
-    <summary>
-      Education: Investment in Schools
-    </summary>
-    <ul>
-      <li>Wrap around service for prenatal, early education, through pre-k until Kindergarten transition.</li>
-      <li>Family services, parent development.</li>
-      <li>Early literacy services with Anoka county library system.</li>
-      <li>Students’ rights for intellectual freedom.</li>
+  {% for priority in priorities %}
+  <article>
+    <h3>{{ priority.title }}</h3>
+    <p>{{ priority.description }}</p> <ul>
+      {% for bullet in priority.bullets %}
+        {% if bullet is string %}
+        <li>{{ bullet }}</li>
+        {% else %}
+        <ul>
+          {% for subBullet in bullet %}
+          <li>{{ subBullet }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      {% endfor %}
     </ul>
-  </details>
-
-  <details>
-    <summary>
-      Safe Communities
-    </summary>
-    <ul>
-      <li>Support law enforcement and public safety initiatives.</li>
-      <li>Invest in after-school and before-school programs for youth.</li>
-      <li>More city-led job shadowing, learn on the go.</li>
-      <li>City partner with Anoka-Ramsey Community College for job placement; youth programming.</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>
-      Health and Human Services: Taking care of our vulnerable communities
-    </summary>
-    <ul>
-      <li>Strengthen the integrity of programs and services our neighbors rely on.</li>
-      <li>Ensure our elders and people with intellectual and physical disabilities living in group homes are having their needs met.</li>
-      <ul>
-        <li>Programs have the tools and funding they need to serve their clients.</li>
-        <li>Families have transitional care support or guidance.</li>
-        <li>Closer partnership and relationship with city.</li>
-        <li>More senior/elder events/gatherings.</li>
-      </ul>
-    </ul>
-  </details>
-
-  <details>
-    <summary>
-      Housing Affordability: Fiscally responsible policy that puts residents central to decision-making
-    </summary>
-    <ul>
-      <li>Lower property taxes.</li>
-      <li>Support renter protections.</li>
-      <li>New housing investments.</li>
-      <li>Equitable zoning.</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>
-      Economic Opportunities
-    </summary>
-    <ul>
-      <li>Economic development.</li>
-      <li>Make sure we remain ‘competitive’ with Anoka and Blaine.</li>
-      <li>Business friendly environment for small businesses and entrepreneurs.</li>
-      <li>Establish a social/entertainment district on Main Street.</li>
-      <li>Downtown Commercial (C-D) Zoning District Establishment.</li>
-      <li>Grow local economy.</li>
-      <li>Support small local business.</li>
-      <ul>
-        <li>Provide more spaces for farmers markets.</li>
-      </ul>
-    </ul>
-  </details>
-
-  <details>
-    <summary>
-      Art and Cultural Legacy
-    </summary>
-    <ul>
-      <li>Invest in cultural celebrations that bring our diverse communities together.</li>
-      <li>Enhance Coon Rapids Arts Commission programming.</li>
-      <li>Cultivate a New Era of Arts, Music, and Vitality in Coon Rapids.</li>
-    </ul>
-  </details>
+  </article>
+  {% endfor %}
 
 </section>
 
