@@ -16,6 +16,7 @@
   --theme-color-copy: var(--base-color-white);
 
   --theme-content-width: 800px; /* Check image widths if this ever changes */
+  --theme-large-width: 600px;
   --theme-gutter: 1rem;
 }
 
@@ -57,6 +58,7 @@ nav {
 
   ul {
     list-style: none;
+    padding: 0;
   }
 
   li {
@@ -138,8 +140,10 @@ footer {
 }
 
 .hero {
-  display: flex;
-  gap: var(--theme-gutter);
+  @media screen and (width >= 600px) {
+    display: flex;
+    gap: var(--theme-gutter);
+  }
 
   blockquote {
     background: var(--base-color-green-lime);
@@ -159,16 +163,29 @@ footer {
   img {
     border-radius: var(--theme-gutter);
   }
+
+  picture {
+    @media screen and (width < 600px) {
+      display: block;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
 }
 
 .priority_teasers {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--theme-gutter);
 
-  .span-all {
-    grid-column: span 2;
+  @media screen and (width >= 600px) {
+    grid-template-columns: 1fr 1fr;
+
+    .span-all {
+      grid-column: span 2;
+    }
   }
+
 }
 
 .priority_teaser {
