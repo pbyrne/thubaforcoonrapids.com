@@ -42,7 +42,7 @@ export default function () {
         "Connect families to wraparound support from prenatal care through kindergarten, because learning starts long before the first day of school.",
         "Strengthen family services and parent development so caregivers have what they need to show up for their kids.",
         "Expand early literacy programs in partnership with the Anoka County Library System.",
-        "Protect every student's right to read, learn, and think freely.",
+        "Protect every student’s right to read, learn, and think freely.",
       ],
     }),
 
