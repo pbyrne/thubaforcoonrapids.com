@@ -47,11 +47,11 @@ export default function () {
     }),
 
     new Priority({
-      title: "Safe Communities",
+      title: "Stable Jobs",
       slug: "safety",
-      description: "Safety That Works for Every Neighbor",
+      description: "Safe Communities",
       bullets: [
-        "Support our law enforcement and first responders.",
+        "Invest in training opportunities for our law enforcement and first responders.",
         "Invest in before- and after-school programs that give young people somewhere to go and something to work toward.",
         "Create hands-on job shadowing opportunities so youth can explore careers right here in Coon Rapids.",
         "Partner with Anoka-Ramsey Community College on job placement and youth programs that open real doors.",
