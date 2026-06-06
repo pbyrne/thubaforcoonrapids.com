@@ -26,22 +26,7 @@ description: Thuba Nguyen is running for mayor of Coon Rapids with a bold vision
     </p>
   </blockquote>
 
-  <img
-      src="/images/hero.jpg"
-      alt="Photo of Thuba Nguyen standing in front of the Minnesota capitol building"
-      eleventy:widths="300"
-      >
+  <img src="/images/hero.jpg" alt="Photo of Thuba Nguyen standing in front of the Minnesota capitol building" eleventy:widths="300">
 </section>
 
-<section class="priority_teasers">
-  <h2 class="span-all">Priorities</h2>
-  {% for priority in priorities %}
-  <article class="priority_teaser priority_teaser-{{ priority.slug }}">
-    <h3 class="priority_teaser__heading">{{ priority.title }}</h3>
-    <p>
-    {{ priority.description }}
-    <a href="/priorities#{{ priority.anchor }}" title="Learn more">→</a>
-    </p>
-  </article>
-  {% endfor %}
-</section>
+{% include "priority-teasers.njk" %}

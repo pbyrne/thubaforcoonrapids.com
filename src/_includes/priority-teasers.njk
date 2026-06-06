@@ -1,0 +1,13 @@
+<section class="priority_teasers">
+  <h2 class="span-all">Priorities</h2>
+  {% for priority in priorities %}
+  <article class="priority_teaser priority_teaser-{{ priority.slug }}">
+    <h3 class="priority_teaser__heading">{{ priority.title }}</h3>
+    <p>
+    {{ priority.description }}
+    <a href="/priorities#{{ priority.anchor }}" title="Learn more">→</a>
+    </p>
+  </article>
+  {% endfor %}
+</section>
+

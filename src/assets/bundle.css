@@ -15,7 +15,7 @@
   --theme-color-background: var(--base-color-black);
   --theme-color-copy: var(--base-color-white);
 
-  --theme-content-width: 800px;
+  --theme-content-width: 800px; /* Check image widths if this ever changes */
   --theme-gutter: 1rem;
 }
 
@@ -92,15 +92,16 @@ main {
   #wrapper.full {
     grid-area: 1 / 1 / 1 / 4
   }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 }
 
 a {
   color: var(--theme-color-copy);
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 details {
@@ -182,14 +183,20 @@ footer {
     margin-top: 0;
   }
 
-
   a {
     display: inline-block;
     color: var(--base-color-black);
+    float: right;
     transition: transform 0.3s ease-in-out; 
   }
 
   & a:hover {
+    text-decoration: none;
     transform: scale(1.5);
   }
+}
+
+section.gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
