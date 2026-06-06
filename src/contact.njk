@@ -1,0 +1,26 @@
+---
+layout: layout
+title: Contact
+description: Contact details and volunteer oportunities for the campaign.
+---
+
+<address>
+  <p>
+  If you have any questions, need a lawn sign, or wish to volunteer, reach out to <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.
+  </p>
+
+  <p>
+  To read more from the campaign, visit <a href="{{ contact.facebook }}">our Facebook page</a> or <a href="{{ contact.instagram }}">Instagram</a>.
+  </p>
+
+  <p>
+  You can make contributions through <a href="{{ contact.actblue }}">ActBlue</a>.
+  </p>
+
+  <p>
+  Send any physical correspondance to:
+  {% for line in contact.address %}
+  <br>{{ line }}
+  {% endfor %}
+  </p>
+</address>
