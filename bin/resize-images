@@ -1,8 +1,14 @@
 #!/bin/bash
 
-ls originals/images | while read f
+ls originals/images/4-3/ | while read f
 do
-  echo $f
-  magick originals/images/$f -gravity center -crop 3:2 src/images/$f
+  echo "Resizing ${f}…"
+  magick originals/images/4-3/$f -gravity center -crop 3:2 src/images/$f
   echo -----
+done
+
+ls originals/images/keep | while read f
+do
+  echo "Moving ${f}…"
+  cp originals/images/keep/$f src/images/$f
 done
