@@ -76,6 +76,18 @@ nav {
     color: var(--base-color-green-lime);
     border-bottom: 1px solid var(--base-color-green-lime);
   }
+
+  a.cta {
+    background-color: var(--base-color-green-lime);
+    color: var(--base-color-black);
+    border: 0.25rem solid transparent;
+    border-radius: var(--theme-gutter);
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  a.cta:hover, a.cta:focus-visible {
+    border-color: var(--base-color-green-jewel);
+  }
 }
 
 main {
