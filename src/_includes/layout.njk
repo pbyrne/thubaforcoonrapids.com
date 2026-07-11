@@ -3,11 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# title -#}
     <title>{{ title }} | Thuba for Coon Rapids 2026</title>
-    <link rel="stylesheet" href="/assets/bundle.css">
-    <!-- <script src="/assets/bundle.js"></script> -->
+    <meta property="og:title" content="{{ title }} | Thuba for Coon Rapids 2026">
+    {# description -#}
     <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
+
+    {# embed image -#}
+    {% if page.image -%}
+    {# TODO: Implement processing at build time to get reasonably sized versions, based on https://tjaddison.com/blog/2022/08/processing-images-linked-from-frontmatter-with-eleventy-img-to-use-in-meta-tags/ #}
+    <meta property="og:image" value="{{ page.image }}">
+    {% endif -%}
+
     <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="stylesheet" href="/assets/bundle.css">
+    {# <script src="/assets/bundle.js"></script> #}
   </head>
   <body>
     <header>
