@@ -235,3 +235,16 @@ section.gallery {
 address {
   font-style: normal;
 }
+
+.full-image {
+  margin: 1rem 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  img.yard-sign {
+    box-shadow: 0 0 0.5rem var(--base-color-green-jewel);
+  }
+}

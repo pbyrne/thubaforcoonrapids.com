@@ -3,7 +3,14 @@
 ls originals/images/4-3/ | while read f
 do
   echo "Resizing ${f}…"
-  magick originals/images/4-3/$f -gravity center -crop 3:2 src/images/$f
+  magick originals/images/4-3/$f -gravity center -crop 4:3 src/images/$f
+  echo -----
+done
+
+ls originals/images/3-2/ | while read f
+do
+  echo "Resizing ${f}…"
+  magick originals/images/3-2/$f -gravity center -crop 3:2 src/images/$f
   echo -----
 done
 
