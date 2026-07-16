@@ -1,28 +1,36 @@
 #!/bin/bash
 
+set -e
+
 ls originals/images/4-3/ | while read f
 do
   echo "Resizing ${f}…"
-  magick originals/images/4-3/$f -gravity center -crop 4:3 src/images/$f
+  magick originals/images/4-3/$f -gravity center -crop 4:3 src/images/$f &
   echo -----
 done
 
 ls originals/images/3-2/ | while read f
 do
   echo "Resizing ${f}…"
-  magick originals/images/3-2/$f -gravity center -crop 3:2 src/images/$f
+  magick originals/images/3-2/$f -gravity center -crop 3:2 src/images/$f &
   echo -----
 done
 
 ls originals/images/4-5/ | while read f
 do
   echo "Resizing ${f}…"
-  magick originals/images/4-5/$f -gravity center -crop 4:5 src/images/$f
+  magick originals/images/4-5/$f -gravity center -crop 4:5 src/images/$f &
   echo -----
 done
 
 ls originals/images/keep | while read f
 do
   echo "Moving ${f}…"
-  cp originals/images/keep/$f src/images/$f
+  cp originals/images/keep/$f src/images/$f &
 done
+
+echo "Waiting for processing to complete…"
+
+wait $(jobs -p)
+
+echo "Done!"
